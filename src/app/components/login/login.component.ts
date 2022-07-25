@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('ROLE', data.roles[0].authority);
           localStorage.setItem('USERNAME', data.username);
           if (data.roles[0] == "ROLE_USER") {
-            alert("Là User")
+            alert("Là User");
             this.router.navigate(['/']);
 
           } else {
