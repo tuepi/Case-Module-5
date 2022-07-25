@@ -1,0 +1,66 @@
+<section id="aa-signin">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aa-signin-area">
+          <div class="aa-signin-form">
+            <div class="aa-signin-form-title">
+              <a class="aa-property-home" href="index.html">Property Home</a>
+              <h4>Sign in to your account</h4>
+            </div>
+            <form class="contactform" [formGroup]="createForm" (submit)='saveHouse()'>
+              <div class="aa-single-field">
+                <label for="address">Address</label>
+                <input type="text" formControlName="address" id="address" placeholder="Address">
+              </div>
+              <div class="aa-single-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" formControlName="name" placeholder="Name House">
+              </div>
+
+              <div class="aa-single-field">
+                <label for="bathroom">Bathroom</label>
+                <input type="text" name="name" id="bathroom" formControlName="bathroom" placeholder="Number Bathroom">
+              </div>
+              <div class="aa-single-field">
+                <label for="bedroom">Bedroom</label>
+                <input type="text" name="name" id="bedroom" formControlName="bedroom" placeholder="Number Bedroom">
+              </div>
+              <div class="aa-single-field">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" formControlName="description" placeholder="Description">
+              </div>
+              <div class="aa-single-field">
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price" formControlName="price" placeholder="Price">
+              </div>
+              <div class="aa-single-field">
+                <input type="hidden" name="user-id" id="user-id" formControlName="user-id">
+              </div>
+              <div class="aa-single-field">
+                <label >Category</label>
+                <select formControlName="category">
+                  <option *ngFor="let item of listCategory" value="{{item.id}}">{{item.name}}</option>
+                </select>
+              </div>
+              <div class="form-group col-12">
+                <input type="file"
+                       id="file"
+                       #userPhoto
+                       (change)="onFileSelected($event)"
+                       name="image"
+                       autocomplete="off"
+                       formControlName="image"
+                />
+              </div>
+              <div class="aa-single-submit">
+                <input type="submit" value="Add" class="aa-browse-btn" name="submit">
+              </div>
+            </form>
+            <a routerLink="/">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

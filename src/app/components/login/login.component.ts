@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('ACCESS_TOKEN', data.accessToken);
           localStorage.setItem('ROLE', data.roles[0].authority);
           localStorage.setItem('USERNAME', data.username);
+          localStorage.setItem('USERID', data.id);
           if (data.roles[0].authority == "ROLE_USER") {
             alert("Đăng nhập thành công!!!");
             this.router.navigate(['/']);

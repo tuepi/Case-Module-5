@@ -5,6 +5,7 @@ import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {DetailComponent} from "./components/house/detail/detail.component";
 import {FindAllComponent} from "./components/house/find-all/find-all.component";
+import {CreateHouseComponent} from "./components/house/create-house/create-house.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path : "detail",
         component : DetailComponent
+      },
+      {
+        path:'create',
+        component:CreateHouseComponent
       }
     ]
   },
