@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 import {AuthenticationService} from "../../services/authentication.service";
 import {first} from "rxjs";
 
@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('ACCESS_TOKEN', data.accessToken);
           localStorage.setItem('ROLE', data.roles[0].authority);
           localStorage.setItem('USERNAME', data.username);
-          if (data.roles[0] == "ROLE_USER") {
-            alert("Là User");
+          if (data.roles[0].authority == "ROLE_USER") {
+            alert("Đăng nhập thành công!!!");
             this.router.navigate(['/']);
 
           } else {
