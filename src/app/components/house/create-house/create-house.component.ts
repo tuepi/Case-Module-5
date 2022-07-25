@@ -115,7 +115,7 @@ export class CreateHouseComponent implements OnInit {
     const house=this.setNewHouse()
     this.houseService.save(house).subscribe((data)=>{
       console.log(data);
-      this.router.navigate(['/']);
+      // this.router.navigate(['/']);
     },error=>{
       console.log(error)
     })

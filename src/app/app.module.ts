@@ -15,6 +15,7 @@ import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import { CreateHouseComponent } from './components/house/create-house/create-house.component';
+import { Top5MostRentedHouseComponent } from './components/top5-most-rented-house/top5-most-rented-house.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateHouseComponent } from './components/house/create-house/create-hou
     NavbarComponent,
     FindAllComponent,
     DetailComponent,
-    CreateHouseComponent
+    CreateHouseComponent,
+    Top5MostRentedHouseComponent
   ],
   imports: [
     BrowserModule,

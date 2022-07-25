@@ -1,0 +1,33 @@
+<section id="aa-client-testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aa-client-testimonial-area">
+          <div class="aa-title">
+            <h2>Top 5 Nhà được thuê nhiều nhất</h2>
+          </div>
+          <!-- testimonial content -->
+          <div class="aa-testimonial-content" >
+            <!-- testimonial slider -->
+            <ul class="aa-testimonial-slider" >
+              <li>
+                <div class="aa-testimonial-single"  *ngFor="let houses of houses;index as i">
+                  <div class="aa-testimonial-img">
+                    <img src="{{houses.image}}" alt="testimonial img">
+                  </div>
+                  <div class="aa-testimonial-info">
+                    <p>{{houses.description}}</p>
+                  </div>
+                  <div class="aa-testimonial-bio">
+                    <p>{{houses.address}}</p>
+                    <span>{{houses.name}}}</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

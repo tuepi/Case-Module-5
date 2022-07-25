@@ -310,7 +310,7 @@ img {
 /*Preloader*/
 #aa-preloader-area {
   background-color: #F8F8F8;
-  position: fixed; 
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -1041,7 +1041,7 @@ img {
 
 #aa-client-testimonial {
   background-attachment: fixed;
-  background-image: url("../img/testimonial-bg.jpg");
+  background-image: url("../img/R.jfif");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2474,7 +2474,7 @@ img {
 ====================*/
 
 #aa-signin {
-  background-image: url("../img/signin-bg.jpg");
+  background-image: url("../img/R.jfif");
   background-position: center center;
   background-size: cover;
   bottom: 0;
@@ -2728,7 +2728,7 @@ img {
   }
 
   .pulse {
-    left: 46%;  
+    left: 46%;
   }
 
 }
@@ -2818,7 +2818,7 @@ img {
   }
 
   .pulse {
-    left: 44%;  
+    left: 44%;
   }
 
 }
@@ -3197,7 +3197,7 @@ img {
   }
 
   .pulse {
-    left: 43%;  
+    left: 43%;
   }
 
 }
@@ -3397,7 +3397,7 @@ img {
   }
 
   .pulse {
-    left: 39%;  
+    left: 39%;
   }
 }
 @media (max-width: 320px) {
@@ -3421,7 +3421,7 @@ img {
     left: 17%;
   }
 
-  #aa-header .aa-header-area .aa-header-left .aa-telephone-no {  
+  #aa-header .aa-header-area .aa-header-left .aa-telephone-no {
     font-size: 13px;
     margin-top: 3px;
   }
@@ -3444,7 +3444,7 @@ img {
   }
 
   .pulse {
-    left: 38%;  
+    left: 38%;
   }
-  
+
 }

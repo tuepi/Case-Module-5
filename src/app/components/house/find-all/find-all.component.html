@@ -8,6 +8,7 @@
       </div>
       <div class="aa-latest-properties-content">
         <div class="row">
+        <div class="row">
           <div class="col-md-4" *ngFor="let house of houses ; index as i">
             <article class="aa-properties-item">
               <a href="#" class="aa-properties-item-img">
@@ -17,7 +18,7 @@
               <div class="aa-tag for-sale">
                 Ready
               </div>
-              <div class="aa-properties-item-content" [routerLink]="['/detail', house.id]">
+              <div class="aa-properties-item-content" [routerLink]="['/detail/', house.id]">
 
                 <div class="aa-properties-info">
                   <span>{{house.bedroom}} Beds</span>
@@ -41,4 +42,5 @@
     </div>
   </div>
 </div>
-
+</div>
+<app-top5-most-rented-house></app-top5-most-rented-house>

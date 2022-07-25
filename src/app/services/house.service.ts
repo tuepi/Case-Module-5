@@ -15,4 +15,12 @@ export class HouseService {
     return this.httpClient.post<House>(API_URL,house);
 
   }
+
+  findById(id: any) : Observable<House>{
+    return this.httpClient.get<House>(API_URL + `/${id}`)
+  }
+
+  findHouseOrderTop5(house:House){
+    return this.httpClient.get<House>(API_URL+"/by-price-top2")
+  }
 }
