@@ -8,14 +8,14 @@
               <a class="aa-property-home" href="index.html">Property Home</a>
               <h4>Sign in to your account</h4>
             </div>
-            <form class="contactform">
+            <form class="contactform" [formGroup]="form" (submit)="login()">
               <div class="aa-single-field">
-                <label for="email">Email <span class="required">*</span></label>
-                <input type="email" required="required" aria-required="true" value="" name="email" id="email">
+                <label for="username">Username <span class="required">*</span></label>
+                <input type="username" required="required" aria-required="true" value="" formControlName="username" id="username">
               </div>
               <div class="aa-single-field">
-                <label for="password">Password <span class="required" id="password">*</span></label>
-                <input type="password" name="password">
+                <label for="password">Password <span class="required" id="password" >*</span></label>
+                <input type="password" name="password" formControlName="password">
               </div>
               <div class="aa-single-field">
                 <label>
