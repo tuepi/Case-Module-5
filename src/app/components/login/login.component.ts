@@ -27,16 +27,16 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          console.log(data);
           localStorage.setItem('ACCESS_TOKEN', data.accessToken);
           localStorage.setItem('ROLE', data.roles[0].authority);
           localStorage.setItem('USERNAME', data.username);
+          localStorage.setItem('USER_ID', data.id);
           if (data.roles[0].authority == "ROLE_USER") {
             alert("Đăng nhập thành công!!!");
-            this.router.navigate(['/']);
+            this.router.navigate(['/users']);
 
           } else {
-            this.router.navigate(['/admin']);
+            this.router.navigate(['/admins']);
           }
         },
         error => {

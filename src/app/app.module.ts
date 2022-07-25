@@ -11,6 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FindAllComponent } from './components/house/find-all/find-all.component';
 import { DetailComponent } from './components/house/detail/detail.component';
+import { CreateComponent } from './components/house/create/create.component';
+import { FindByOwnerIdComponent } from './components/house/find-by-owner-id/find-by-owner-id.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DetailComponent } from './components/house/detail/detail.component';
     RegisterComponent,
     NavbarComponent,
     FindAllComponent,
-    DetailComponent
+    DetailComponent,
+    CreateComponent,
+    FindByOwnerIdComponent
   ],
     imports: [
         BrowserModule,
