@@ -11,6 +11,7 @@ import {HomeService} from "../../../services/home.service";
 })
 export class FindAllComponent implements OnInit {
 
+  id: any;
   houses : House[] | any;
 
   constructor(private homeService: HomeService,
@@ -28,5 +29,16 @@ export class FindAllComponent implements OnInit {
       console.log("Lỗi");
     });
   }
+
+  // house : House | any;
+  //
+  // findById() {
+  //   this.homeService.findById(this.id).subscribe(result => {
+  //     this.house = result;
+  //     console.log(result)
+  //   }, error => {
+  //     console.log("Lỗi");
+  //   });
+  // }
 
 }

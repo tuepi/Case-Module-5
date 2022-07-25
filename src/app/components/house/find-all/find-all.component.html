@@ -2,13 +2,12 @@
   <div class="container">
     <div class="aa-latest-property-area">
       <div class="aa-title">
-        <h2>Latest Properties</h2>
+        <h2>List House</h2>
         <span></span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
       </div>
       <div class="aa-latest-properties-content">
         <div class="row">
-          <div class="col-md-4" *ngFor="let house of houses ; index as i" routerLink="/detail">
+          <div class="col-md-4" *ngFor="let house of houses ; index as i">
             <article class="aa-properties-item">
               <a href="#" class="aa-properties-item-img">
 <!--                <img src="../../../../assets/img/item/house370x220.jpg" alt="img">-->
@@ -17,7 +16,8 @@
               <div class="aa-tag for-sale">
                 Ready
               </div>
-              <div class="aa-properties-item-content">
+              <div class="aa-properties-item-content" [routerLink]="['/detail', house.id]">
+
                 <div class="aa-properties-info">
                   <span>{{house.bedroom}} Beds</span>
                   <span>{{house.bathroom}} Baths</span>
