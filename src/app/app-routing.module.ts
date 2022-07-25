@@ -17,7 +17,7 @@ const routes: Routes = [
         component : FindAllComponent
       },
       {
-        path : "detail",
+        path : "detail/:id",
         component : DetailComponent
       },
       {
