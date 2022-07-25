@@ -14,5 +14,7 @@ export class HouseService {
     return this.httpClient.get(API_URL + '/homes');
   }
 
-
+  top2MostViewed(): Observable<any> {
+    return this.httpClient.get(API_URL + '/houses/by-price-top2');
+  }
 }
