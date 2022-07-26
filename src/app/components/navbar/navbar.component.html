@@ -50,7 +50,8 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-          <li><a href="index.html">HOME</a></li>
+          <li *ngIf="isLogin"><a href="index.html">MY HOUSE</a></li>
+          <li *ngIf="!isLogin"><a href="index.html">HOME</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -58,15 +59,8 @@
               <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>
             </ul>
           </li>
-          <li><a href="gallery.html">GALLERY</a></li>
-          <li class="dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="blog-archive.html">BLOG</a></li>
-              <li><a href="blog-single.html">BLOG DETAILS</a></li>
-            </ul>
-          </li>
-          <li><a routerLink="create" *ngIf="isLogin">Add House</a></li>
+          <li><a routerLink="search">SEARCH</a></li>
+          <li><a routerLink="create" *ngIf="isLogin">ADD HOUSE</a></li>
           <li><a routerLink="create" *ngIf="!isLogin"></a></li>
         </ul>
       </div><!--/.nav-collapse -->

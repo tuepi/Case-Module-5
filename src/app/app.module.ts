@@ -18,6 +18,7 @@ import { CreateHouseComponent } from './components/house/create-house/create-hou
 import { FindByOwnerIdComponent } from './components/house/find-by-owner-id/find-by-owner-id.component';
 import {JwtInterceptor} from "./helper/jwt-interceptor";
 import {ErrorInterceptor} from "./helper/error-interceptor";
+import { SearchComponent } from './components/house/search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {ErrorInterceptor} from "./helper/error-interceptor";
     FindAllComponent,
     DetailComponent,
     FindByOwnerIdComponent,
-    CreateHouseComponent
+    CreateHouseComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

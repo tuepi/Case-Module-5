@@ -31,13 +31,12 @@ export class RegisterComponent implements OnInit {
     const user = this.setNewUser();
     this.authenticationService.register(user).subscribe((data) => {
       console.log(data);
-      alert("thành công")
+      alert("Thành công")
       this.registerForm.reset();
       this.router.navigate(['/login']);
     }, err => {
       console.log(err);
     });
-    console.log(user);
   }
 
   private setNewUser() {

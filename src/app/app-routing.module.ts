@@ -7,6 +7,7 @@ import {DetailComponent} from "./components/house/detail/detail.component";
 import {FindAllComponent} from "./components/house/find-all/find-all.component";
 import {FindByOwnerIdComponent} from "./components/house/find-by-owner-id/find-by-owner-id.component";
 import {CreateHouseComponent} from "./components/house/create-house/create-house.component";
+import {SearchComponent} from "./components/house/search/search.component";
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     path: 'detail' ,
     component : DetailComponent
   },
+  {
+    path : "search",
+    component : SearchComponent
+  }
 ];
 
 @NgModule({
