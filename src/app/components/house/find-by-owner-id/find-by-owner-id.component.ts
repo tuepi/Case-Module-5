@@ -22,8 +22,9 @@ export class FindByOwnerIdComponent implements OnInit {
   }
 
   findHousesByOwnerId() {
-    this.id = localStorage.getItem('USER_ID');
+    this.id = localStorage.getItem('USERID');
    this.houseService.getAllByOwnerId(this.id).subscribe(result => {
+     console.log(result)
       this.houses = result;
     }, error => {
       console.log("Lỗi");

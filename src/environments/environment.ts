@@ -6,14 +6,14 @@ export const environment = {
   production: false,
   apiUrl: 'http://localhost:8080',
   firebaseConfig : {
-    apiKey: 'AIzaSyBhADJQBWps30_8laakTu-NSao7i412d6k',
-    authDomain: 'case-md5.firebaseapp.com',
-    databaseURL : 'https://case-md5-default-rtdb.firebaseio.com',
-    projectId: 'case-md5',
-    storageBucket: 'case-md5.appspot.com',
-    messagingSenderId: '622085079004',
-    appId: '1:622085079004:web:6dfe373b178faf8eeed919',
-    measurementId: 'G-4BHJBRKEL0'
+    apiKey: "AIzaSyA4R7krmOYjOdxiVy39wpULdQ_kklKy-HM",
+    authDomain: "case-md5-42a44.firebaseapp.com",
+    databaseURL:"https://case-md5-42a44-default-rtdb.firebaseio.com",
+    projectId: "case-md5-42a44",
+    storageBucket: "case-md5-42a44.appspot.com",
+    messagingSenderId: "657962097956",
+    appId: "1:657962097956:web:51710b5748e7b5f37527b1",
+    measurementId: "G-G1XDGSZYQV"
   }
 };
 

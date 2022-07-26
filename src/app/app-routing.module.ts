@@ -5,8 +5,8 @@ import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {DetailComponent} from "./components/house/detail/detail.component";
 import {FindAllComponent} from "./components/house/find-all/find-all.component";
-import {CreateComponent} from "./components/house/create/create.component";
 import {FindByOwnerIdComponent} from "./components/house/find-by-owner-id/find-by-owner-id.component";
+import {CreateHouseComponent} from "./components/house/create-house/create-house.component";
 
 const routes: Routes = [
   {
@@ -22,8 +22,8 @@ const routes: Routes = [
         component : DetailComponent
       },
       {
-        path : "create",
-        component : CreateComponent
+        path:'create',
+        component:CreateHouseComponent
       },
       {
         path : "users",

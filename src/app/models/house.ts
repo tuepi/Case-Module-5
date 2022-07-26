@@ -11,4 +11,5 @@ export interface House {
   price? : string,
   owner? : string,
   status? : string,
+  image?:string,
 }
