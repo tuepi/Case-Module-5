@@ -23,14 +23,15 @@ export class CreateHouseComponent implements OnInit {
 
   listCategory:any = [];
   createForm=new FormGroup({
-    address:new FormControl(''),
-    name:new FormControl(''),
-    bathroom:new FormControl(''),
-    bedroom:new FormControl(''),
-    description:new FormControl(''),
-    price:new FormControl(''),
-    category:new FormControl(''),
-    image:new FormControl('')
+    address:new FormControl(),
+    name:new FormControl(),
+    bathroom:new FormControl(),
+    bedroom:new FormControl(),
+    description:new FormControl(),
+    price:new FormControl(),
+    category:new FormControl(),
+    image:new FormControl(),
+
 
 
 
@@ -81,27 +82,18 @@ export class CreateHouseComponent implements OnInit {
 
   private setNewHouse() {
     const house:House = {
-      // @ts-ignore
       name:this.createForm.value.name,
-      // @ts-ignore
       address:this.createForm.value.address,
-      // @ts-ignore
       bathroom:this.createForm.value.bathroom,
-      // @ts-ignore
       bedroom:this.createForm.value.bedroom,
-      // @ts-ignore
       description:this.createForm.value.description,
-      // @ts-ignore
       price:this.createForm.value.price,
-      // @ts-ignore
       image:this.fb,
-      // @ts-ignore
       category:{
-        // @ts-ignore
         id:this.createForm.value.category
       },
       // @ts-ignore
-      status:1,
+      status : 1,
       // @ts-ignore
       owner:{
         id: localStorage.getItem('USERID')

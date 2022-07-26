@@ -16,8 +16,7 @@ export class HouseService {
   constructor(private httpClient:HttpClient) { }
 
   save(house:House){
-    return this.httpClient.post<House>(API_URL,house);
-
+    return this.httpClient.post<House>(API_URL + '/houses',house);
   }
 
   getAllByOwnerId(id : string): Observable<House> {

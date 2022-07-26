@@ -8,7 +8,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { FindAllComponent } from './components/house/find-all/find-all.component';
 import { DetailComponent } from './components/house/detail/detail.component';
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
@@ -16,6 +16,8 @@ import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import { CreateHouseComponent } from './components/house/create-house/create-house.component';
 import { FindByOwnerIdComponent } from './components/house/find-by-owner-id/find-by-owner-id.component';
+import {JwtInterceptor} from "./helper/jwt-interceptor";
+import {ErrorInterceptor} from "./helper/error-interceptor";
 
 @NgModule({
   declarations: [
@@ -38,7 +40,15 @@ import { FindByOwnerIdComponent } from './components/house/find-by-owner-id/find
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor, multi: true
+    }, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
